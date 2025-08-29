@@ -3,13 +3,12 @@ package com.juan.mercado;
 public class Cliente {
 
 	private String nombre;
-	private Producto producto;
 	private Venta mi_ticket;	
 	
-	public Cliente(String nombre, Producto producto) {
+	public Cliente(String nombre, Venta mi_ticket) {
 		
 		this.nombre = nombre;
-		this.producto = producto;
+		this.mi_ticket = mi_ticket;
 	}
 
 	public String getNombre() {
@@ -20,12 +19,17 @@ public class Cliente {
 		this.nombre = nombre;
 	}
 
-	public Producto getProducto() {
-		return producto;
+	public void agregarProducto(Producto producto) {
+		mi_ticket.getMisProductos().add(producto);
+		
 	}
 
-	public void setProducto(Producto producto) {
-		this.producto = producto;
+	public Venta getMi_ticket() {
+		return mi_ticket;
+	}
+
+	public void setMi_ticket(Venta mi_ticket) {
+		this.mi_ticket = mi_ticket;
 	}
 	
 	

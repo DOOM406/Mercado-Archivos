@@ -4,9 +4,9 @@ public class Producto {
 
 	private String nombre_producto;
 	private int cantidad_producto;
-	private float precio_producto;
+	private double precio_producto;
 	
-	public Producto(String nombre_producto, int cantidad_producto, float precio_producto) {
+	public Producto(String nombre_producto, int cantidad_producto, double precio_producto) {
 		
 		
 		this.nombre_producto = nombre_producto;
@@ -30,7 +30,7 @@ public class Producto {
 		this.cantidad_producto = cantidad_producto;
 	}
 
-	public float getPrecio_producto() {
+	public double getPrecio_producto() {
 		return precio_producto*cantidad_producto;
 	}
 
